@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./Header";
+import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Cart from "./Cart";
-import Home from "./Home";
+import Cart from "./components/Cart";
+import Home from "./components/Home";
 
 function App() {
   return (

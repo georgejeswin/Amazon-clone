@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Product from "./Product";
-import db from "./firebase";
+import db from "../firebase";
 
 function Home() {
   const [products, setProducts] = useState([]);
