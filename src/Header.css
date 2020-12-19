@@ -1,0 +1,70 @@
+.header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.header::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.header {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.header img {
+  width: 100px;
+  margin-left: 13px;
+  padding: 10px;
+}
+.header__option {
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+}
+.header__optionLineTwo {
+  font-weight: bold;
+}
+.header__navItems {
+  display: flex;
+}
+.header__search {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 140px;
+}
+.header__searchInput:focus {
+  outline-width: 0;
+}
+.header__search:focus-within {
+  box-shadow: 0 0 0 3px #febd69;
+}
+.header__searchInput {
+  width: 100%;
+  border: none;
+}
+.header__searchIconContainer {
+  background-color: #febd69;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 10px;
+  color: black;
+}
+.header__cart {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+.header__cartCount {
+  color: #f08804;
+  padding-left: 4px;
+}
