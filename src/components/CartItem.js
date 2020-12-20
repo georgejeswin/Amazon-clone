@@ -2,18 +2,24 @@ import React from "react";
 import db from "../firebase";
 import "./CartItem.css";
 
-const CartItem = ({ id, title, price, image, quantiy }) => {
+const CartItem = ({ id, title, price, image, quantity }) => {
   const deleteItem = () => {
     db.collection("cart-items").doc(id).delete();
   };
 
-  const changeQuantity = () => {};
-
+  const changeQuantity = (newQuantity) => {
+    db.collection("cart-items")
+      .doc(id)
+      .update({
+        quantity: parseInt(newQuantity),
+      });
+  };
   let options = [];
 
-  for (let i = 1; i < Math.max(quantiy + 1, 20); i++) {
+  for (let i = 1; i < Math.max(quantity + 1, 20); i++) {
     options.push(<option value={i}>Qty: {i}</option>);
   }
+  console.log("opt....>>>>", options.value);
   return (
     <div className="cartItem">
       <hr />
@@ -26,7 +32,12 @@ const CartItem = ({ id, title, price, image, quantiy }) => {
             <div className="cartItem__title">{title}</div>
             <div className="cartItem__actions">
               <div className="cartItem__quantity">
-                <select name="">{options}</select>
+                <select
+                  onChange={(e) => changeQuantity(e.target.value)}
+                  value={quantity}
+                >
+                  {options}
+                </select>
               </div>
               <div className="cartItem__delete">
                 <button onClick={deleteItem}>Delete</button>

@@ -31,9 +31,22 @@
   display: flex;
   padding: 20px;
 }
-/* .cartItem__quantity {
+.cartItem__quantity {
   padding: 8px;
-} */
+}
+.cartItem__delete {
+  padding: 8px;
+}
+.cartItem__quantity select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.cartItem__delete button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
 @media only screen and (max-width: 600px) {
   .cartItem {
     flex: 1;
