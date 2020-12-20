@@ -21,6 +21,7 @@
   width: 100px;
   margin-left: 13px;
   padding: 10px;
+  flex: 0.2;
 }
 .header__option {
   display: flex;
@@ -32,13 +33,15 @@
 }
 .header__navItems {
   display: flex;
+  align-items: center;
+  margin-left: 25px;
 }
 .header__search {
   display: flex;
   border-radius: 5px;
   overflow: hidden;
   flex: 1;
-  min-width: 140px;
+  min-width: 320px;
 }
 .header__searchInput:focus {
   outline-width: 0;
@@ -67,4 +70,15 @@
 .header__cartCount {
   color: #f08804;
   padding-left: 4px;
+}
+@media only screen and (max-width: 700px) {
+  .header {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: scroll;
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+  }
 }

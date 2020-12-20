@@ -1,0 +1,28 @@
+.cartTotal {
+  flex: 0.3;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.cartTotal__info {
+  display: flex;
+  padding: 20px;
+}
+.cartTotal__info h3 {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.cartTotal__button button {
+  background-color: #f0c14b;
+  width: 80%;
+  border: 2px solid #a88734;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-weight: 400;
+}
+.cartTotal__button button:hover {
+  background-color: #ddb347;
+}

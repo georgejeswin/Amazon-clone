@@ -1,0 +1,19 @@
+.cartItems {
+  flex: 0.8;
+  object-fit: contain;
+  background-color: #fff;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+.cartItems h1 {
+  padding: 10px;
+}
+@media only screen and (max-width: 700px) {
+  .cartItems {
+    margin-right: 0;
+  }
+}
