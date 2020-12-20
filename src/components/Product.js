@@ -8,7 +8,7 @@ const Product = ({ title, price, image, id }) => {
     cartItem.get().then((doc) => {
       if (doc.exists) {
         cartItem.update({
-          quantity: parseInt(doc.data().quantiy) + 1,
+          quantity: doc.data().quantity + 1,
         });
       } else {
         cartItem.set({

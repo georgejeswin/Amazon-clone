@@ -65,6 +65,7 @@ function Home() {
             {sliceProductsBottom.map((product) => (
               <Product
                 key={product.id}
+                id={product.id}
                 title={product.product.title}
                 price={product.product.price}
                 rating={product.product.rating}
